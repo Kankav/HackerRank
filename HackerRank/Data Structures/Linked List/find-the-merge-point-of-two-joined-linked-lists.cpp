@@ -1,3 +1,23 @@
+int findLen(SinglyLinkedListNode* head){
+
+    int c=0;
+    SinglyLinkedListNode* temp = head;
+    while(temp!=nullptr){
+        c++;
+        temp=temp->next;
+    }
+    return c;
+}
+
+SinglyLinkedListNode* traverse(SinglyLinkedListNode* head, int len){
+
+    while(len--){
+        head=head->next;
+    }
+
+    return head;
+}
+
 int findMergeNode(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
 
     int len1 = findLen(head1);
